@@ -9,13 +9,12 @@ const updateHeadingFunction = function (){
 
 updateHeadingButton.addEventListener ('click', updateHeadingFunction)
 
-const submitChrisButton = document.querySelector('#Button2')
+const form = document.querySelector("form#Form1")
 
 const submitChrisFunction = function (){
     const headingSubmit = document.querySelector('#Heading1')
-    headingSubmit.textContent = document.querySelector('#textInput1').value
-    //alert(headingSubmit.textContent)
+    headingSubmit.textContent = 'Chris ' + document.querySelector('#textInput1').value
     event.preventDefault()
 }
 
-submitChrisButton.addEventListener ('click', submitChrisFunction)
+form.addEventListener ('submit', submitChrisFunction)
