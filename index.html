@@ -9,26 +9,32 @@
 </head>
 <body>
         <link href="https://fonts.googleapis.com/css?family=Cabin|Montserrat" rel="stylesheet">
-    <h1 id="Heading1" style="font-size: 60pt">Chrismess</h1>
+    <header>
+        <h1 id="Heading1">Chrismess</h1>
+        <h2>A whole mess o' Chris</h2>
+        <img src="decoration.png">
+    </header>
 
     <p id="Paragraph1">Let's list some Chris movies</p>
     <form id="Form1">
-        <input 
-            type="text"
-            id="textInput1"
-            name="flickName"
-            placeholder="Enter a movie here"
-            required
-            autofocus
-        />
-        <input
-            type="text"
-            id="textInput2"
-            name="flickYear"
-            placeholder="Enter the year here"
-            required
-        />
-        <button type="submit" id="Button1">Submit a Chris movie!</button>
+        <div>
+            <input 
+                type="text"
+                id="textInput1"
+                name="flickName"
+                placeholder="Enter a movie here"
+                required
+                autofocus
+            />
+            <input
+                type="text"
+                id="textInput2"
+                name="flickYear"
+                placeholder="Enter the year here"
+                required
+            />
+            <button type="submit" id="Button1">Submit a Chris movie!</button>
+        </div>
     </form>
 
     <ul id="flicksList"></ul>

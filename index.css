@@ -3,16 +3,132 @@ body {
     background-color: black;
     color: #00e600;
     font-size: 40pt;
+    margin: 0;
 }
 
-movieNameStyle{
+header{
+    background-image: url(chris.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: 0.5rem solid white;
+    height: 11vw;
+}
+
+h1{
+    margin: 0;
+    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15vw;
+    text-shadow: 1.5px 1.5px 5px purple,
+                 1.5px 1.5px 8px aqua;
+}
+
+h2 {
+    text-align: center;
+    text-decoration: underline grey;
+    margin-top: -1.5vw;
+    font-size: 3vw;
+    font-weight: 400;
+  }
+  
+  header img {
+    width: 80%;
+    display: block;
+    margin: -4vw auto 0;
+  }
+  
+  p{
+    text-align: left;
+    margin-top: 8vw;
+    font-size: 3vw;
+    font-weight: 200;
+  }
+
+  form {
+    padding: 1rem;
+  }
+  
+  form > div {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    flex: 4 1 0px;
+    height: auto;
+    min-width: 0;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: .5rem;
+    border: 1px solid #cacaca;
+    background-color: #fefefe;
+    box-shadow: inset 0 1px 2px rgba(10,10,10,.1);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #0a0a0a;
+    transition: box-shadow .5s,border-color .25s ease-in-out;
+    appearance: none;
+  }
+  
+  input[type="text"].smaller {
+    flex: 2 1 0px;
+  }
+  
+  input[type="text"]:focus,
+  input[type="number"]:focus {
+    outline: 0;
+    border: 1px solid #8a8a8a;
+    background-color: #fefefe;
+    box-shadow: 0 0 5px #cacaca;
+  }
+  
+  button[type="submit"] {
+    background-color: #ff3340;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+    height: auto;
+    align-self: stretch;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 1rem;
+    margin: 0;
+    white-space: nowrap;
+    display: inline-block;
+    vertical-align: middle;
+    font-family: inherit;
+    padding: 0 1em;
+    border: 1px solid transparent;
+    transition: background-color .25s ease-out,color .25s ease-out;
+    font-size: .9rem;
+    line-height: 1;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #ff3340cc;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+  }
+  
+  /*
+  .chris {
+    display: block;
+  }
+*/
+
+.movieNameStyle{
     color: lightcoral;
     text-shadow: -2px -2px pink;
     font-size: 35pt;
     font-family: Cabin, Helvetica, Arial, sans-serif;
 }
 
-movieYearStyle{
+.movieYearStyle{
     color: darkcyan;
     text-shadow: -2px -2px aqua;
     font-size: 35pt;
