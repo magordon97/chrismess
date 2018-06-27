@@ -9,7 +9,16 @@ class App{
 
     newSpan(name, value){
         const span = document.createElement('span')
-        span.classList.add(name)
+        switch(name){
+            case 'name':
+            span.classList.add('movieNameStyle')
+                break
+            case 'year':
+            span.classList.add('movieYearStyle')
+                break
+            default:
+            span.classList.add(name)
+        }
         span.textContent = value
         return span
     }   
@@ -24,7 +33,6 @@ class App{
             const buildSpan = this.newSpan(propertyName, flickObj[propertyName])
             newListElement.appendChild(buildSpan) //ERROR HERE
         })
-
         return newListElement
     }
 
@@ -36,34 +44,11 @@ class App{
             year: ` (${f.flickYear.value})`,
         }
 
-        //const flickName = newSpan('movieNameStyle',f.flickName.value)
-        //const flickYear = newSpan('movieYearStyle',` (${f.flickYear.value})`)
-
         const listElement = this.renderItem(flickObj)
         const list1 = document.querySelector('#flicksList')
         list1.appendChild(listElement)
 
-        //const movie = document.createElement('movieNameStyle')
-        //movie.textContent=flickName
-    
-        //const year = document.createElement('movieYearStyle')
-        //year.textContent = flickYear
-
-        //const listElement = document.createElement('li')
-
-        //listElement.append(flickName)
-        //listElement.append(flickYear)
-        //listElement.appendChild(document.createElement('br'))
-
-        //list1.appendChild(listElement)
-        /*
-        const newItem = document.createElement('li')
-        newItem.textContent = flickName + ' (' + flickYear + ')'
-
-        const list = document.querySelector('#flicksList')
-        list.appendChild(newItem)
-        */
-    f.reset()
+        f.reset()
     }
 }
 
