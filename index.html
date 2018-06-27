@@ -8,18 +8,29 @@
     <link rel="stylesheet" type="text/css" media="screen" href="index.css" />   
 </head>
 <body>
-    <h1 id="Heading1" style="font-size: 36pt">Chrismess</h1>
-    <h2 id="Heading2">Chris Pratt is the best Chris!</h2>
-    <button id="Button1">Update heading</button>
-    
-    <br>
+    <h1 id="Heading1" style="font-size: 40pt">Chrismess</h1>
 
-    <p id="Paragraph1">Who is your favorite Chris? Answer below</p>
+    <p id="Paragraph1">Let's list some Chris movies</p>
     <form id="Form1">
-        Enter last name: <input type="text" id="textInput1" autofocus/>
-        <button type="submit" id="Button2">Submit a Chris</button>
-
+        <input 
+            type="text"
+            id="textInput1"
+            name="flickName"
+            placeholder="Enter a movie here"
+            required
+            autofocus
+        />
+        <input
+            type="text"
+            id="textInput2"
+            name="flickYear"
+            placeholder="Enter the year here"
+            required
+        />
+        <button type="submit" id="Button1">Submit a Chris movie!</button>
     </form>
+
+    <ul id="flicksList"></ul>
 
     <script src="index.js"></script>
 </body>

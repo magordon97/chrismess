@@ -1,20 +1,35 @@
 console.log('It works!')
 
-const updateHeadingButton = document.querySelector('#Button1')
+const form1 = document.querySelector("form#Form1")
 
-const updateHeadingFunction = function (){
-    const headingUpdate = document.querySelector('#Heading2')
-    headingUpdate.textContent = "No, wait. Chris Evans is the best Chris!"
+const submitChrisMovieFunction = function (ev){
+    ev.preventDefault()
+    const f = ev.target
+
+    const flickName = f.flickName.value
+    const flickYear = ' (' + f.flickYear.value + ')'
+
+    const list1 = document.querySelector('#flicksList')
+
+    const movie = document.createElement('movieNameStyle')
+    movie.textContent=flickName
+    
+    const year = document.createElement('movieYearStyle')
+    year.textContent = flickYear
+
+    list1.append(movie)
+    list1.append(year)
+    list1.appendChild(document.createElement('br'))
+
+    /*
+    const newItem = document.createElement('li')
+    newItem.textContent = flickName + ' (' + flickYear + ')'
+
+    const list = document.querySelector('#flicksList')
+    list.appendChild(newItem)
+    */
+
+  f.reset()
 }
 
-updateHeadingButton.addEventListener ('click', updateHeadingFunction)
-
-const form = document.querySelector("form#Form1")
-
-const submitChrisFunction = function (){
-    const headingSubmit = document.querySelector('#Heading1')
-    headingSubmit.textContent = 'Chris ' + document.querySelector('#textInput1').value
-    event.preventDefault()
-}
-
-form.addEventListener ('submit', submitChrisFunction)
+form1.addEventListener ('submit', submitChrisMovieFunction)
