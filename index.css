@@ -124,13 +124,13 @@ h2 {
 .movieNameStyle{
     color: lightcoral;
     text-shadow: -2px -2px pink;
-    font-size: 35pt;
+    font-size: 5vw;
     font-family: Cabin, Helvetica, Arial, sans-serif;
 }
 
 .movieYearStyle{
     color: darkcyan;
     text-shadow: -2px -2px aqua;
-    font-size: 35pt;
+    font-size: 5vw;
     font-family: Montserrat, Helvetica, Arial, sans-serif;
 }
