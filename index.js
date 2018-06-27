@@ -17,10 +17,13 @@ const submitChrisMovieFunction = function (ev){
     const year = document.createElement('movieYearStyle')
     year.textContent = flickYear
 
-    list1.append(movie)
-    list1.append(year)
-    list1.appendChild(document.createElement('br'))
+    const listElement = document.createElement('li')
 
+    listElement.append(movie)
+    listElement.append(year)
+    listElement.appendChild(document.createElement('br'))
+
+    list1.appendChild(listElement)
     /*
     const newItem = document.createElement('li')
     newItem.textContent = flickName + ' (' + flickYear + ')'
