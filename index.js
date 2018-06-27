@@ -9,16 +9,7 @@ class App{
 
     newSpan(name, value){
         const span = document.createElement('span')
-        switch(name){
-            case 'name':
-            span.classList.add('movieNameStyle')
-                break
-            case 'year':
-            span.classList.add('movieYearStyle')
-                break
-            default:
-            span.classList.add(name)
-        }
+        span.classList.add(name)
         span.textContent = value
         return span
     }   
