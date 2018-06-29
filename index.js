@@ -20,11 +20,27 @@ class App{
         return newDeleteButton
     }
 
+    addFavoriteButton(ev, flickObj){
+        const favButton = document.createElement('button')
+        favButton.classList.add('fav')
+        favButton.type='submit'
+        favButton.innerHTML = '<i class="fas fa-star" title="toggle favorite">Fave!</i>'
+        favButton
+         .addEventListener(
+           'click',
+           (_ev) => this.toggleFavorite(ev, flickObj) //
+         )
+        //actions.appendChild(favButton) //
+        return favButton
+
+    }
+
     deleteAMovie(ev, flickObj){
         const itemToDelete = ev.target.closest('.flickObj')
 
+        //const i = this.flickArray.indexOf(flickObj)
+        //this.flickArray.splice(i, 1)
         this.list1.removeChild(itemToDelete)
-
     }
 
     newSpan(name, value){
@@ -42,12 +58,14 @@ class App{
     
         properties.forEach((propertyName)=>{
             const buildSpan = this.newSpan(propertyName, flickObj[propertyName])
-            newListElement.appendChild(buildSpan)//Append button to newListElement
+            newListElement.appendChild(buildSpan)
         })
 
         const deleteItemButton = this.addDeleteButton(flickObj);
+        const favoriteButton = this.addFavoriteButton(flickObj);
 
         newListElement.appendChild(deleteItemButton)
+        newListElement.appendChild(favoriteButton)
         
         return newListElement
     }
@@ -58,6 +76,7 @@ class App{
         const flickObj = {
             name: f.flickName.value,
             year: ` (${f.flickYear.value})`,
+            favorite: false,
         }
 
         this.flickArray.push(flickObj.name)
@@ -69,6 +88,7 @@ class App{
         this.list1.appendChild(listElement)
         
         f.reset()
+        f.flickName.focus()
     }
 }
 
